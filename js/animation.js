@@ -6,6 +6,7 @@ const Animation = function(){
 		}
 	};
 	const sendToServer = (animation)=>{
+		if(!window.WS) return;
 		WS.sendJSON({
 			type:'ani',
 			spriteName:animation.sprite.name,
